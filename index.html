@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colours app</title>
+    <link rel="stylesheet" href="./app/scss/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="copied">hex copied!</div>
+    <div class="overlay">
+        <div class="give-name">
+            <button class="close-save"><i class="fas fa-times"></i></button>
+            <div class="save-flex">
+                <h1>Give a name to your palette!</h1>
+                <input type="text" class="palette-name-input">
+                <button class="save-name-btn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay2">
+        <div class="pick-section">
+            <button class="close-library-btn"><i class="fas fa-times"></i></button>
+            <h1>Pick your palette</h1>
+
+            <div class="palettes-flex"><!-- palattes are added dynamically by JS --></div>
+
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="slots-container">
+        <div class="slot">
+            <div class="slot-inner">
+                <span class="hex-code"></span>
+                <i class="fas fa-sliders-h adjust"></i>
+                <i class="fas fa-lock-open lock"></i>
+            </div>
+
+            <div class="color-adjust">
+                <span>Hue</span>
+                <input type="range" class="hue-range range" min="0" max="359">
+                <span>Saturation</span>
+                <input type="range" class="saturation-range range" min="0" max="100">
+                <span>Brightness</span>
+                <input type="range" class="brightness-range range" min="0" max="100">
+                <button class="close-modal-btn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="slot">
+            <div class="slot-inner">
+                <span class="hex-code"></span>
+                <i class="fas fa-sliders-h adjust"></i>
+                <i class="fas fa-lock-open lock"></i>
+            </div>
+            <div class="color-adjust">
+                <span>Hue</span>
+                <input type="range" class="hue-range range" min="0" max="359">
+                <span>Saturation</span>
+                <input type="range" class="saturation-range range" min="0" max="100">
+                <span>Brightness</span>
+                <input type="range" class="brightness-range range" min="0" max="100">
+                <button class="close-modal-btn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="slot">
+            <div class="slot-inner">
+                <span class="hex-code"></span>
+                <i class="fas fa-sliders-h adjust"></i>
+                <i class="fas fa-lock-open lock"></i>
+            </div>
+            <div class="color-adjust">
+                <span>Hue</span>
+                <input type="range" class="hue-range range" min="0" max="359">
+                <span>Saturation</span>
+                <input type="range" class="saturation-range range" min="0" max="100">
+                <span>Brightness </span>
+                <input type="range" class="brightness-range range" min="0" max="100">
+                <button class="close-modal-btn"><i class="fas fa-times"></i></button>
+
+            </div>
+        </div>
+        <div class="slot">
+            <div class="slot-inner">
+                <span class="hex-code"></span>
+                <i class="fas fa-sliders-h adjust"></i>
+                <i class="fas fa-lock-open lock"></i>
+            </div>
+            <div class="color-adjust">
+                <span>Hue</span>
+                <input type="range" class="hue-range range" min="0" max="359">
+                <span>Saturation</span>
+                <input type="range" class="saturation-range range" min="0" max="100">
+                <span>Brightness</span>
+                <input type="range" class="brightness-range range" min="0" max="100">
+                <button class="close-modal-btn"><i class="fas fa-times"></i></button>
+
+            </div>
+        </div>
+        <div class="slot">
+            <div class="slot-inner">
+                <span class="hex-code"></span>
+                <i class="fas fa-sliders-h adjust"></i>
+                <i class="fas fa-lock-open lock"></i>
+            </div>
+            <div class="color-adjust">
+                <span>Hue</span>
+                <input type="range" class="hue-range range" min="0" max="359">
+                <span>Saturation</span>
+                <input type="range" class="saturation-range range" min="0" max="100">
+                <span>Brightness</span>
+                <input type="range" class="brightness-range range" min="0" max="100">
+                <button class="close-modal-btn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="btns-container">
+        <div class="btn">
+            <button id="library-btn"><i class="fas fa-book-open"></i> </button>
+            <div>Library</div>
+        </div>
+        <div class="btn">
+            <button id="refresh-btn"><i class="fas fa-sync"></i> </button>
+            <div>Refresh</div>
+        </div>
+        <div class="btn">
+            <button id="save-btn"><i class="fas fa-save"></i> </button>
+            <div>Save</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/0.7.4/chroma.min.js" integrity="sha512-2htb9d9uu575yACalN24SbX8UeIEFvbajeArYBIoWnKu38VGlJNfoWqzgQIB3hGMOceayLIdE46v1pkGs1iuTw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./app/js/script.js"></script>
+</body>
+</html>

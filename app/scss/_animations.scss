@@ -1,0 +1,31 @@
+@keyframes rotate{
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes open{
+    to{
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes close{
+    to{
+        bottom: -25%;
+        opacity: 0;
+    }
+}
+
+@keyframes pop{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
